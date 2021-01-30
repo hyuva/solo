@@ -1,0 +1,2 @@
+# solo
+sample webapp
