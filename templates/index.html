@@ -1,0 +1,167 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="body">
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner" style="height: 20%;">
+          <div class="carousel-item active">
+            <img src="{% static 'images/nt3.jpg' %}" class="d-block w-100" style="height: 500px;" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'images/nt1.jpg' %}" class="d-block w-100" style="height: 500px;" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'images/nt2.jpg' %}" class="d-block w-100" style="height: 500px;" alt="...">
+          </div>
+        </div>
+      </div>
+      <marquee class="text-dark shadow"> <h4> welcome to soloman website....!</h4> </marquee>
+      <div class="container shadow-lg p-3 mb-5 bg-white rounded my-4 ">
+        <ul class="nav nav-tabs nav-info">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Hiring</a>
+                <div class="container p-5">
+                <p id="hiring">Django full stack developer. <span class="text-danger">New~</span> </p>
+                <p id="hiring">Php Programming. <span class="text-danger">New~</span> </p>
+                <p id="hiring">UI Development. <span class="text-danger">New~</span> </p>
+            </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">News</a>
+            </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Branch</a>
+            </li>
+          </ul>
+      </div>
+
+      <div class="row" style="background-color: #6185e0; color:white;">
+           <div class="col-5     my-5" >
+               
+            <img src="{% static 'images/yuva.jpg' %}" class="rounded-circle" style="height: 250px; width:200px; float:right" alt="">
+            </div>  
+            <div class="col-6 my-5 p-5">
+                <h3>Soloman, uva</h3>
+                <p>Hi, I'm yuvaraj. This is my sample web page for django framework.</p>
+            </div>
+      </div>
+    </div>
+
+<section>
+    <div class="services text-center my-5">
+        <h2>OUR SERVICES</h2>
+        <p>We are a leading national project management and developing the web sites.</p><br>
+       <div class="container">
+        <div class="row">
+           <div class="col-3">
+               <div class="card shadow">
+                      <img src="{% static 'images/client.jpg' %}" style="height:200px; width:260px;" alt="">
+                   <div class="card-body" style="height:200px;">
+                       <h4>Client Orientation</h4>
+                        <p>We understand the importance of sticking to schedules and maintaining a high level of quality in all our deliverables.</p>
+                    </div>
+               </div>
+           </div>
+           <div class="col-3">
+            <div class="card shadow">
+                  <img src="{% static 'images/response.jpg' %}" style="height:200px; width:260px;" alt="">
+                <div class="card-body" style="height:200px;">
+                    <h4>Trust & Responsibility</h4>
+                     <p>We take personal responsibility for all our relationships – with clients, colleagues, partners, investors and our community.        </p>
+                             </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card shadow">
+              <img src="{% static 'images/commit.jpg' %}" style="height:200px; width:260px;" alt="">
+              <div class="card-body" style="height:200px;">
+                    <h4>Commitment</h4>
+                     <p>We are committed to the success of our clients, their ambitions and their objectives.             </p>   </div>
+            </div>
+        </div>
+        <div class="col-3 ">
+            <div class="card shadow">
+              <img src="{% static 'images/exl.jpg' %}" style="height:200px; width:260px;" alt="">
+              <div class="card-body" style="height:200px;">
+                    <h4>Excellence</h4>
+                     <p>We have pledged ourselves to high quality performance that produces outstanding results of lasting value. </p>                </div>
+            </div>
+        </div>
+       </div>
+    </div>
+    </div>
+
+</section>
+
+
+
+
+
+   <div class="container-fluid shadow bg-primary">
+<div class="row" id="contatti">
+
+    <div class="container col-8 mt-5 mb-4 shadow" >
+            <h2 class="text-uppercase mt-3 font-weight-bold text-light text-center">CONTACT US</h2>
+          <div class="contact mx-5 my-5" style="margin-right:20%;">
+            <form action="" method="POST">
+                {% csrf_token %}
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" name="name" placeholder="Name" required>
+                    <label for="">Name</label>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" name="company" placeholder="company" required>
+                    <label for="">Company</label>
+                </div>
+                </div>
+                <div class="col-lg-6 mb-3 my-3">
+                  <div class="form-floating">
+                    <input type="email" class="form-control mt-2" name="email" placeholder="Email" required>
+                    <label for="">Email</label>  
+                </div>
+                </div>
+                <div class="col-lg-6 my-3">
+                  <div class="form-floating">
+                    <input type="number" class="form-control mt-2" name="mobile" placeholder="Telefono" required>
+                    <label for="">Mobile</label>
+                </div>
+                </div>
+                <div class="col-12 my-3">
+                  <div class="form-floating">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" name="msg" placeholder="Description" rows="3" required></textarea>
+                    <label for="">Messages</label>
+                </div>
+                </div>
+                <div class="col-12">
+                <div class="form-floating">
+                  <div class="form-check text-dark">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                    <label class="form-check-label text-light" for="invalidCheck2">
+                      Accetta le condizioni
+                    </label>
+                  </div>
+                </div>
+                </div>
+                <div class="col-12 my-2">
+                  <button class="btn btn-outline-light" style="margin-left:47%" type="submit">Send</button>
+                </div>
+              </div>
+              
+            </form>
+           
+          </div>
+        </div>
+    </div>
+    </div>
+</div>
+<footer class="footer" style="height: 100px; background-color:rgba(2, 59, 247, 0.849);">
+    <p class="text-white text-center p-5">allcopyrights@soloman</p>
+</footer>
+</div>
+{% endblock %}

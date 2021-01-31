@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+            <form action="" method="post" class="form-login col-4 shadow container mt-0" style="left: 35%; top: 20%;  position: absolute; margin-top: -20%;">
+                {% csrf_token %}
+                <h4 class="text-center my-3">Remarks</h4>
+                <div class="form-floating mb-2 my-4">
+                    <input type="text" name="name" class="form-control" id="" required>
+                    <label for="">Name</label>
+                </div>
+                <div class="form-floating mb-2">
+                    <input type="number" name="phone" class="form-control" id="" required>
+                    <label for="">Phone</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <textarea name="message" id="" class="form-control" required></textarea>
+                    <label for="">Message</label>
+                </div>
+                <input type="submit" class="btn btn-outline-primary mb-4" value="Submit">
+            </form>
+        </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

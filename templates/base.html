@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary" >
+            <div class="container-fluid">
+              <a class="navbar-brand" href="/"><h3>Soloman</h3></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse mx-5" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-5">
+                  <li class="nav-item mx-3 my-2">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                  </li>
+                  <li class="nav-item mx-3 my-2">
+                    <a class="nav-link" href="pro">Professional</a>
+                  </li>
+                  <li class="nav-item dropdown mx-3 my-2">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Developer
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      {% if request.session.username %}
+                        <li><a class="dropdown-item" href="developer">Developer Details</a></li>
+                      {% else %}  
+                        <li><a class="dropdown-item" href="remark">Remarks</a></li>
+                        {% endif %}
+                      </ul>
+                  </li>
+                  <li class="nav-item mx-3 my-2">
+                    <a class="nav-link" href="contact" tabindex="-1" aria-disabled="true">Contact</a>
+                  </li>
+                </ul>
+                {% if request.session.username %}
+                <a href="logout" class="btn btn-outline-light mx-2">logout</a>
+                <p class="text-light my-2 mx-2">hello, {{request.session.username}}</p>
+                {% else %}
+                <a href="register" class="btn btn-outline-light">Register</a>
+                <a href="login" class="btn btn-outline-light mx-2">Login</a>
+                {% endif %}
+              </div>
+            </div>
+          </nav>
+          {% block content %}
+
+          {% endblock %}
+        </body>
+        </html>

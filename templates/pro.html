@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container border my-4">
+    <div class="row my-3">
+        <div class="col-3">
+            <div class="card shadow">
+                  <img src="{% static 'images/python.png' %}" style="height:200px; width:260px;" alt="">
+                <div class="card-body text-center">
+                    Python & Django Framework
+                </div>    
+                </div>
+            </div>
+        <div class="col-3">
+            <div class="card shadow">
+                  <img src="{% static 'images/php.jpg' %}" style="height:200px; width:260px;" alt="">
+                  <div class="card-body text-center">
+                    Php core & Laravel Framework
+                </div>    
+                             </div>
+            </div>
+        <div class="col-3">
+            <div class="card shadow">
+                  <img src="{% static 'images/web.jpg' %}" style="height:200px; width:260px;" alt="">
+                <div class="card-body text-center">
+                    FullStack Web Developer
+                </div>    
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card shadow">
+                      <img src="{% static 'images/boot.jpg' %}" style="height:200px; width:260px;" alt="">
+                      <div class="card-body text-center">
+                        Bootstrap
+                    </div>    
+                                 </div>
+                </div>
+    
+    </div>
+</div>
+{% endblock %}

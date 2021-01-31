@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="container col-9">
+        <div class="border shadow">
+            <form action="" class="main-form mx-5 my-5">
+                <div class="row mx-5">
+                    <div class="col-8">
+                        <table class="table table-light table-hover">
+                            <tr>
+                                <td>Name </td>
+                                <td> Yuvaraj M H</td>
+                            </tr>
+                            <tr>
+                                <td>Qualification </td>
+                                <td> MCA</td>
+                            </tr>
+                            <tr>
+                                <td>Contact </td>
+                                <td> 8508543480</td>
+                            </tr>
+                            <tr>
+                                <td>Email </td>
+                                <td> mhyuva@gmail.com</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-2 mx-5">
+                        <img src="{% static 'images/yuva.jpg' %}" style="height: 150px; float:right;" alt="" srcset="">
+                    </div>
+                </div>
+                <div class="container">
+                    <h5 class="text-Uppercase my-4">Skills</h5>
+                    <div class="row">
+                        <div class="col-8">
+                            <table class="table table-primary mx-5">
+                                <tr>
+                                    <td>Languege</td>
+                                    <td>Python, PHP, Java, C, C++</td>
+                                </tr>
+                                <tr>
+                                    <td>Web Technologiess</td>
+                                    <td>Html, Css, JavaScript, Bootstrap</td>
+                                </tr>
+                                <tr>
+                                    <td>Framework</td>
+                                    <td>Django</td>
+                                </tr>
+                                <tr>
+                                    <td>Database</td>
+                                    <td>Mysql, sqlite3</td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <h5 class="text-Uppercase my-4">certificate Course</h5>
+                    <div class="row">
+                        <div class="col-10 mx-5">
+                            <table class="table mx-5">
+                                <ul>
+                                    <li>Udemy certified Python, Java, JavaScript Course completed in 2020</li>
+                                    <li>Solo learn certified Php programming Course completed in 2020. </li>
+                                    <li>Udemy certified Python and Django full stack web developing Course in 2021</li>
+                                    <li>Aja Technologiess certified web Technologiess 2 month training in 2021 </li>
+                                </ul>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <h5 class="text-Uppercase my-4">Internship Profile</h5>
+                    <div class="row">
+                        <div class="col-10 mx-5">
+                            <table class="table mx-5">
+                                <ul>
+                                    <li>Undergone a 4 month internship project "Internal Accounting Portal Services" using php and mysql at Aja Technologiess, Erode.</li>
+                                </ul>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <h5 class="text-Uppercase my-4">Pg Projects</h5>
+                    <div class="row">
+                        <div class="col-10 mx-5">
+                            <table class="table mx-5">
+                                <ul>
+                                    <li>Done a Mca mini project on "Adhaar Secure Travel Identity" using tracking models.</li>
+                                    <li>Done a Mca project on Internal Accounting Portal System.</li>
+                                </ul>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+{% endblock %}
